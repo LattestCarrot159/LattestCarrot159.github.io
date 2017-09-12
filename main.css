@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+.char {
+	padding: 10px;
+	display: inline-block;
+	border: 5px solid black;
+	background-color: white;
+	background-size: cover;
+	width: 664px;
+	height: 700px;
+}
+p {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+.name {
+	position: fixed;
+	left: 150px;
+	border: 3px solid green;
+	font-family: cursive;
+	width: 150px;
+	top: -3px;
+}
+.other {
+	left: 120px;
+	top: 30px;
+	position: fixed;
+	font-family: cursive;
+}
+html {
+	text-align: center;
+	background-image: url("resources/other/background.png");
+}
+.charName {
+	font-family: cursive;
+	float: left;
+}
+.uses {
+	text-align: center;
+	font-weight: normal;
+}
+.showcase {
+	padding: 10px;
+	display: inline-block;
+	border: 5px solid black;
+	background-color: white;
+	background-size: cover;
+	width: 750px;
+	height: 550px;
+}
+video {
+	display: inline;
+}
+#bastion{background-image:url("resources/pics/bastion.png");}
+#hanzo{background-image:url("resources/pics/hanzo.png");}
+#lucio{background-image:url("resources/pics/lucio.png");}
+#mccree{background-image:url("resources/pics/mccree.png");}
+#pharah{background-image:url("resources/pics/pharah.png");}
+#reinhardt{background-image:url("resources/pics/reinhardt.png");}
+#roadhog{background-image:url("resources/pics/roadhog.png");}
+#widowmaker{background-image:url("resources/pics/widowmaker.png");}
+#zenyatta{background-image:url("resources/pics/zenyatta.png");}
