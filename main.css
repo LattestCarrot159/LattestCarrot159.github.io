@@ -50,7 +50,6 @@ html {
 video {
 	display: inline;
 }
-#bastion{background-image:url("resources/pics/bastion.png");}
 #hanzo{background-image:url("resources/pics/hanzo.png");}
 #lucio{background-image:url("resources/pics/lucio.png");}
 #mccree{background-image:url("resources/pics/mccree.png");}
@@ -59,3 +58,4 @@ video {
 #roadhog{background-image:url("resources/pics/roadhog.png");}
 #widowmaker{background-image:url("resources/pics/widowmaker.png");}
 #zenyatta{background-image:url("resources/pics/zenyatta.png");}
+#bastion{background-image:url("resources/pics/bastion.png");}
