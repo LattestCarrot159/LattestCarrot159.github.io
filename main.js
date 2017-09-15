@@ -22,10 +22,11 @@ $(function (){
 			else {
 				timesFixed = times + ' Hours';
 			};
-			$charWrapper.append('<div class="char" id="' + key + '"><p class="charName">' + key + '<br>' + timesFixed + '</p></div><br>');
+			$charWrapper.append('<div class="char" id="' + key + '"><p class="charName">' + key + '<br>' + timesFixed + '</p><img src="resources/pics/' + key + '.png"></img></div><br><br>');
 			console.log(key + ', ' + timesFixed);
 			i++;
 		};
 	};
 	charRequest.send();
+	$
 });
