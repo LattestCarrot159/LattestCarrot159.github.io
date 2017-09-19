@@ -24,6 +24,8 @@ $(function (){
 			};
 			$charWrapper.append('<div class="char" id="' + key + '"><p class="charName">' + key + '<br>' + timesFixed + '</p><img src="resources/pics/' + key + '.png"></img></div><br><br>');
 			console.log(key + ', ' + timesFixed);
+			$("#" + key).hide();
+			$("#" + key).fadeIn(3000);
 			i++;
 		};
 	};
