@@ -27,6 +27,7 @@ $(function (){
 			$("#" + key).hide();
 			$("#" + key).fadeIn(3000);
 			console.log("#" + key);
+			sleep(1000);
 			i++;
 		};
 	};
