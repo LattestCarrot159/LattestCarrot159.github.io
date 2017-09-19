@@ -26,9 +26,9 @@ $(function (){
 			console.log(key + ', ' + timesFixed);
 			$("#" + key).hide();
 			$("#" + key).fadeIn(3000);
+			console.log("#" + key);
 			i++;
 		};
 	};
 	charRequest.send();
-	$
 });
