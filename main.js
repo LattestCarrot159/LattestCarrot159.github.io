@@ -26,7 +26,7 @@ $(function (){
 			console.log(key + ', ' + timesFixed);
 			$("#" + key).hide();
 			$("#" + key).delay(i * 500).fadeIn(1000);
-			$("#" + key).delay(i * 500).slideDown(1000);
+			$("#" + key).delay(i * 500).slideDown(3000);
 			console.log("#" + key);
 			i++;
 		};
