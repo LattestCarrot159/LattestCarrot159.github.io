@@ -8,8 +8,6 @@ $(function() {
     }, 1000, function() {
         $('.effect').fadeIn(1000);
     });
-	
-<<<<<<< HEAD
     var charRequest = new XMLHttpRequest();
     var $wrapper = $('#wrapper');
     var charList = new Array();
@@ -57,7 +55,6 @@ $(function() {
         };
         charRequest.send();
     });
-=======
 	charRequest.open('GET', 'https://owapi.net/api/v3/u/LatestCarrot-1839/heroes');	
 	charRequest.onload = function() {
 		var charData = JSON.parse(charRequest.responseText);
@@ -87,5 +84,4 @@ $(function() {
 		};
 	};
 	charRequest.send();
->>>>>>> 81106d361fb86dd54ad7ea4b0eb3e73ae13a4e3b
 });
