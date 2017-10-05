@@ -44,13 +44,11 @@ body {
 	display: inline-block;
 }
 #graph {
-	width: 23px;
     height: 7px;
 }
 td {
     display: inline-block;
-    height: 10px;
-    width: 500px;
+    padding-bottom: 2px;
 }
 .outline {
 	border: 1px solid black;
@@ -72,6 +70,18 @@ td div {
 .charName:hover {
     background-color: grey;
 }
-td {
-    padding-bottom: 10px;
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    background-color: grey;
+}
+td a {
+    border-left: 0.5px solid black;
+    border-right: 0.5px solid black;
+	padding: 5px;
+}
+.horizontal-menu {
+    display: inline-block;
 }

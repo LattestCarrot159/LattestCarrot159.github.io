@@ -2,6 +2,8 @@ $(function() {
     $('.effect').hide();
     $('#wrapper').css("width", "0px");
     $('#wrapper').css("height", "0px");
+	$('#col1').css("height", "0px");
+	$('#col2').css("height", "0px");
     $('#wrapper').animate({
         height: "900px",
         width: "1010px"
@@ -13,6 +15,9 @@ $(function() {
     var $wrapper = $('#wrapper');
     var charList = new Array();
     $('#search2').click(function () {
+		$('#search1').attr('disabled','disabled');
+		$('#search2').attr('disabled','disabled');
+		$('#col2').animate({ height: "0px" }, 1000);
         charList.length = 0;
         $('#graph2').empty();
         charRequest.open('GET', 'https://owapi.net/api/v3/u/' + $('#battletag2').val() + '/heroes');
@@ -46,7 +51,7 @@ $(function() {
                 i++;
             };
             charList.sort(Comparator);
-            $('#col2').animate({ height: charList.length * 23.5 + 'px' }, 1000, function () {
+            $('#col2').animate({ height: '677px' }, 1000, function () { 
                 for (var i in charList) {
                     $('#graph2').append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '2" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
                     $('#' + charList[i].key + '2').animate({ width: (charList[i].times / charList[0].times) * 200 + 'px' }, 1000);
@@ -54,8 +59,13 @@ $(function() {
             });
         };
         charRequest.send();
+		$('#search1').removeAttr('disabled');
+		$('#search2').removeAttr('disabled');
     });
     $('#search1').click(function () {
+		$('#search1').attr('disabled','disabled');
+		$('#search2').attr('disabled','disabled');
+		$('#col1').animate({ height: "0px" }, 1000);
         charList.length = 0;
         $('#graph1').empty();
 		charRequest.open('GET', 'https://owapi.net/api/v3/u/' + $('#battletag1').val() + '/heroes');
@@ -89,11 +99,13 @@ $(function() {
                 i++;
             };
             charList.sort(Comparator);
-            $('#col1').animate({ height: charList.length * 23.5 + 'px' }, 1000, function () { 
+            $('#col1').animate({ height: '677px' }, 1000, function () { 
 			    for (var i in charList) {
                     $('#graph1').append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '1" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
                     $('#' + charList[i].key + '1').animate({ width: (charList[i].times / charList[0].times) * 200 + 'px' }, 1000);
                 };
+				$('#search1').removeAttr('disabled');
+				$('#search2').removeAttr('disabled');
             });
         };
         charRequest.send();

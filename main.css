@@ -47,12 +47,11 @@ body {
 	display: inline-block;
 }
 #graph {
-	width: 23px;
     height: 7px;
 }
 td {
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
 }
 .outline {
 	border: 1px solid black;
@@ -89,4 +88,3 @@ td a {
 .horizontal-menu {
     display: inline-block;
 }
-.horizontal-menu tr td
