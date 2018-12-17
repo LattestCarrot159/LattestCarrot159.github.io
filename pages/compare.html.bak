@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>OW Stat Tracking</title>
+    <title>Stat Comaprison</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -9,28 +9,29 @@
 <body>
     <div id="wrapper">
         <div id="header" class="effect">
-            <img src="resources/pics/banner.png" />
+            <img src="../resources/pics/banner.png" />
             <p>
-                Blizzard Battletag:&nbsp;
-                <input id="battletag" />
-                <button id="search">Search</button>
+                Blizzard Battletag 1:&nbsp;
+                <input id="battletag1" />
+                <button id="search1">Search</button>
             </p>
-            <table class="horizontal-menu">
-                <tr>
-                    <td><a href="pages/compare.html">Comparison</a></td>
-                </tr>
-            </table>
+            <p>
+                Blizzard Battletag 2:&nbsp;
+                <input id="battletag2" />
+                <button id="search2">Search</button>
+            </p>
         </div>
 
         <div id="col1" class="float effect">
-        </div>
+            <table id="graph1">
 
-        <div id="col2" class="float effect">
-            <table id="graph">
             </table>
         </div>
 
-        <div id="col3" class="float effect">
+        <div id="col2" class="float effect">
+            <table id="graph2">
+
+            </table>
         </div>
 
         <div id="footer" class="effect">
