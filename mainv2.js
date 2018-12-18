@@ -38,7 +38,6 @@ $(function() {
         
         console.log('Loading API (May take a moment aka a long while)');
         charRequest.open('GET', 'https://owapi.net/api/v3/u/' + username + '/heroes');
-        console.log(charRequest.text);
         
         charRequest.onload = function() {
         	console.log('load Complete!!!!');
@@ -79,9 +78,12 @@ $(function() {
             };
             console.log('Search Finished');
             charList.sort(Comparator);
-            for (var i in charList) {
-            	graph.append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
-            }
+            $('#col2').animate({ height: "677px" }, 1000, function () { 
+			    for (var i in charList) {
+                    $('#graph').append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
+                    $('#' + charList[i].key).animate({ width: (charList[i].times / charList[0].times) * 200 + 'px' }, 1000);
+                };
+            });
         }
     }
 
