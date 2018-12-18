@@ -80,9 +80,9 @@ $(function() {
             charList.sort(Comparator);
             for (var i in charList) {
             	console.log(charList[i].key);
-            };
-        };
-    };
+            }
+        }
+    }
 
     pageSetup();
 });
