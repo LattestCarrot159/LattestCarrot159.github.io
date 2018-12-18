@@ -12,7 +12,7 @@ $(function() {
         
         animateAutoHeight($wrapper, $('.effect'))
         console.log('Beginning search');
-        searchForUser('LatestCarrot159-1839', $('#graph'))
+        searchForUser('LatestCarrot-1839', $('#graph'))
     }
 
     function animateAutoHeight(elementToUse, effectClass) {
