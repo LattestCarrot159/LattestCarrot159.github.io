@@ -31,7 +31,7 @@ $(function() {
 
     function searchForUser(username, graph) {
         var charRequest = new XMLHttpRequest();
-        var charList = new Array();
+        var charList = [];
 
         graph.empty();
         console.log('Graph emptied');
@@ -78,12 +78,8 @@ $(function() {
             };
             console.log('Search Finished');
             charList.sort(Comparator);
-            $('#col2').animate({ height: "677px" }, 1000, function () { 
-			    for (var i in charList) {
-                    graph.append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
-                    $('#' + charList[i].key).animate({ width: (charList[i].times / charList[0].times) * 200 + 'px' }, 1000);
-                };
-            });
+            graph.append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
+            
         }
     }
 
