@@ -38,6 +38,7 @@ $(function() {
         
         console.log('Loading API (May take a moment aka a long while)');
         charRequest.open('GET', 'https://owapi.net/api/v3/u/' + username + '/heroes');
+        console.log('did u get it?');
         
         charRequest.onload = function() {
         	console.log('load Complete!!!!');
