@@ -2,7 +2,7 @@ $(function() {
     $('.effect').hide();
     $('#wrapper').css("width", "0px");
     $('#wrapper').css("height", "0px");
-    $('#col2').css("height", "0px");
+	$('#col2').css("height", "0px");
     $('#wrapper').animate({
         height: "900px",
         width: "1010px"
@@ -12,14 +12,12 @@ $(function() {
     var charRequest = new XMLHttpRequest();
     var $wrapper = $('#wrapper');
     var charList = new Array();
-
-    $('#search').click(function() {
-        $('#col2').animate({
-            height: "0px"
-        }, 1000);
+	
+    $('#search').click(function () {
+		$('#col2').animate({ height: "0px" }, 1000);
         charList.length = 0;
         $('#graph').empty();
-        charRequest.open('GET', 'https://owapi.net/api/v3/u/' + $('#battletag').val() + '/heroes');
+		charRequest.open('GET', 'https://owapi.net/api/v3/u/' + $('#battletag').val() + '/heroes');
         charRequest.onload = function() {
             var charData = JSON.parse(charRequest.responseText);
             var character = charData.us.heroes.playtime.quickplay;
@@ -50,14 +48,10 @@ $(function() {
                 i++;
             };
             charList.sort(Comparator);
-            $('#col2').animate({
-                height: "677px"
-            }, 1000, function() {
-                for (var i in charList) {
+            $('#col2').animate({ height: "677px" }, 1000, function () { 
+			    for (var i in charList) {
                     $('#graph').append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
-                    $('#' + charList[i].key).animate({
-                        width: (charList[i].times / charList[0].times) * 200 + 'px'
-                    }, 1000);
+                    $('#' + charList[i].key).animate({ width: (charList[i].times / charList[0].times) * 200 + 'px' }, 1000);
                 };
             });
         };
