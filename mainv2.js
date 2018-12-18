@@ -79,8 +79,9 @@ $(function() {
             };
             console.log('Search Finished');
             charList.sort(Comparator);
-            graph.append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
-            
+            for (var i in charList) {
+            	graph.append('<tr><td><div class="charName">' + charList[i].key + '</div><div class="outline"><div id="' + charList[i].key + '" class="bar"></div></div><div>' + charList[i].timesFixed + '</div></td></tr>');
+            }
         }
     }
 
