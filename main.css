@@ -37,6 +37,7 @@ body {
 }
 #col2 {
     width: 500px;
+    text-align: center;
 }
 #col3 {
     width: 250px;
@@ -48,6 +49,8 @@ body {
 }
 #graph {
     height: 7px;
+    text-align: left;
+    display: inline;
 }
 td {
     display: inline-block;
@@ -86,5 +89,35 @@ td a {
 	padding: 5px;
 }
 .horizontal-menu {
-    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heroIcon {
+	height: 25px;
+	display: inline-block;
+	border: 2px solid black;
+	border-radius: 4px;
+	margin-right: 5px;
+}
+.timeBarContainer {
+	display: flex;
+	align-items: center;
+	margin: 5px;
+	height: 29px;
+	overflow: auto;
+}
+.barLabel {
+	width: 100%;
+	padding-left: 10px;
+	display: none;
+}
+.barGraph {
+	height: 29px;
+	background: green;
+	display: inline-flex;
+	align-items: center;
+}
+#loading {
+	width: 21px;
+	visibility: hidden;
 }

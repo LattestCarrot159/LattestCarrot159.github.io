@@ -10,11 +10,19 @@
     <div id="wrapper">
         <div id="header" class="effect">
             <img src="resources/pics/banner.png" />
-            <p>
-                Blizzard Battletag:&nbsp;
-                <input id="battletag" />
-                <button id="search">Search</button>
-            </p>
+            <div>
+            	<p style="display: inline-flex; align-items: center;">
+            	    Blizzard Battletag:&nbsp;
+            	    <input id="battletag" />
+            	    <button id="search" style="margin: 6px">Search</button>
+        			<img id="loading" src="resources/pics/loading.gif">
+            	</p>
+            </div>
+        	<select id="dropDown1" style="margin-left: auto; margin-right: auto">
+        		<option value="quickplay" selected>Quickplay</option>
+       	 		<option value="competitive">Competitive</option>
+       		 </select>
+       		 <br><br>
             <table class="horizontal-menu">
                 <tr>
                     <td><a href="pages/compare.html">Comparison</a></td>
@@ -26,15 +34,14 @@
         </div>
 
         <div id="col2" class="float effect">
-            <table id="graph">
-            </table>
+            <div id="graph">
+            </div>
         </div>
 
         <div id="col3" class="float effect">
         </div>
 
         <div id="footer" class="effect">
-            <p>Info: Sorry, none...</p>
         </div>
     </div>
 </body>
